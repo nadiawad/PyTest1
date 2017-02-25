@@ -32,11 +32,27 @@ def draw_triangle():
         myThirdTurtle.right(120)
     myThirdTurtle.speed(2)
 
+
+def draw_my_shape():
+    myTurtle = turtle.Turtle()
+    myTurtle.shape("turtle")
+    myTurtle.forward(100)
+    myTurtle.color("yellow")
+    myTurtle.speed(0)
+    loop_id=1
+    while loop_id <= 360:
+        for i in range(0,4):
+            myTurtle.forward(100)
+            myTurtle.right(90)
+        myTurtle.right(1)
+        loop_id+=1
+        print loop_id
 window = turtle.Screen()
 window.bgcolor("black")
 
-draw_square()
-draw_circle()
-draw_triangle()
+#draw_square()
+#draw_circle()
+#draw_triangle()
+draw_my_shape()
 
 window.exitonclick()
